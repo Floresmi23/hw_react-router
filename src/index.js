@@ -30,9 +30,7 @@ ReactDOM.render(
                         <Route index element={<cools2/>}/>
                         <Route index element={<cools3/>}/>
 
-                        {/*<Route path={"cools1"} element={<cools1/>}/>*/}
-                        {/*<Route index element={<cools2/>}/>*/}
-                        {/*<Route index element={<cools3/>}/>*/}
+                        
 
                     </Route>
                 </Route>
