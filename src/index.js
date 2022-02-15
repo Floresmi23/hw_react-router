@@ -26,12 +26,11 @@ ReactDOM.render(
                     <Route index element={<Home/>}/>
 
                     <Route path={"cool"} element={<Cool/>}>
-                        <Route index element={<cools1/>}/>
-                        <Route index element={<cools2/>}/>
-                        <Route index element={<cools3/>}/>
-
+                        <Route path={"cools1"} element={<cools1/>}/>
+                        <Route path={"cools2"} element={<cools2/>}/>
+                        <Route path={"cools3"} element={<cools3/>}/>
+            
                         
-
                     </Route>
                 </Route>
             </Routes>
