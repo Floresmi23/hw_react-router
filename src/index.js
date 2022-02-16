@@ -9,9 +9,10 @@ import Boxes from "./components/pages/Boxes";
 import BoxList from "./components/BoxList";
 import BoxPage from "./components/BoxPage";
 import Cool from "./components/pages/Cool";
-import cools1 from "./components/pages/data/cools1";
-import cools2 from "./components/pages/data/cools2";
-import cools3 from "./components/pages/data/cools3";
+import Object1 from "./components/pages/data/Object1";
+import Object2 from "./components/pages/data/Object2";
+import Object3 from "./components/pages/data/Object3";
+
 
 ReactDOM.render(
     <React.StrictMode>
@@ -25,16 +26,25 @@ ReactDOM.render(
                     </Route>
                     <Route index element={<Home/>}/>
 
-                    <Route path={"cool"} element={<Cool/>}>
-                        <Route index element={<cools1/>}/>
-                        <Route index element={<cools2/>}/>
-                        <Route index element={<cools3/>}/>
-
-                        {/*<Route path={"cools1"} element={<cools1/>}/>*/}
-                        {/*<Route index element={<cools2/>}/>*/}
-                        {/*<Route index element={<cools3/>}/>*/}
-
+                    <Route path= {"Cool"} element={<Cool/>}>
+                        <Route path={":object1"} element={<Object1/>}/>
+                        <Route path={":object2"} element={<Object2/>}/>
+                        <Route path={":object3"} element={<Object3/>}/>
                     </Route>
+
+                    <Route path ={"/object1"} element={<Object1/>}>
+                        <Route index element={<Object1/>}/>
+                    </Route>
+
+                    <Route path ={"/object2"} element={<Object2/>}>
+                        <Route index element={<Object2/>}/>
+                    </Route>
+
+                    <Route path ={"/object3"} element={<Object3/>}>
+                        <Route index element={<Object3/>}/>
+                    </Route>
+
+
                 </Route>
             </Routes>
         </BrowserRouter>
